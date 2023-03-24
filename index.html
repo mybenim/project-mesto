@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Проек "Место"</title>
+</head>
+<body class="page">
+    <div class="page__content">
+
+<!-- Секция header -->
+
+        <header class="header page__header">
+    <img src="./images/logo.svg" class="header__logo" alt="логотип">
+</header>
+
+<!-- Секция profile -->
+
+<main class="main">
+<section class="profile page__profile">
+ <div class="profile__info">
+   <img src="./images/image.jpg" class="profile__image" alt="Жак-Ив Кусто">
+   <div class="profile__box">
+       <h1 class="profile__title">Жак-Ив Кусто</h1>
+         <button class="profile__square" type="button" aria-label="Редактировать"></button>
+         <p class="profile__subtitle">Исследователь океана</p>
+    </div>
+          <button class="profile__rectangle" type="button" aria-label="плюс"></button>
+     </div>
+</section>
+
+  <!-- Секция еlements -->
+
+  <div class="еlements page__еlement">
+        <ul class="еlement__list">
+          <li class="еlement__item">
+            <img src="./images/cetaceans.jpg" class="еlement__item-img" alt="Китообразные">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Китообразные</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+          <li class="еlement__item">
+            <img src="./images/gibraltar.jpg" class="еlement__item-img" alt="Гибралтарский пролив">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Гибралтар</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+          <li class="еlement__item">
+            <img src="./images/Museum_Monaco.jpg" class="еlement__item-img" alt="Океанографический музей в Монако">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Океанографический музей в Монако</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+          <li class="еlement__item">
+            <img src="./images/calypso.jpg" class="еlement__item-img" alt="корабль Калипсо">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Калипсо</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+          <li class="еlement__item">
+            <img src="./images/bathyscaphe.jpg" class="еlement__item-img" alt="Подводная лодка Жак-Ива Кусто">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Батискаф</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+
+          <li class="еlement__item">
+            <img src="./images/alcyone.jpg" class="еlement__item-img" alt="судно Алкиона">
+            <div class="еlement__group">
+              <h2 class="еlement__title">Алкиона</h2>
+              <a href="#" class="element__like">
+            <img src="./images/vector_like.svg" class="element__vector" alt="лайк">
+            </a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    </main>
+    </div>
+
+<!-- Секция footer -->
+
+<footer class="footer page__footer">
+<p class="footer__info">&copy; 2023. Mesto - France, Monaco, Spain</p>
+</footer>
+
+<!-- Секция popup -->
+<section class="popup">
+    <div class="popup__content">
+     <button class="popup__close"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+         <input type="text" class="popup__text-name" placeholder="Жак-Ив Кусто">
+         <div class="popup__line"></div>
+        <input type="text" class="popup__text" placeholder="Исследователь океана">
+        <div class="popup__line"></div>
+       <a href="#" class="popup__safe">Сохранить</a>
+    </div>
+</section>
+
+<!-- Секция script -->
+<script src="./scripts/index.js"></script>
+
+</body>
+</html>

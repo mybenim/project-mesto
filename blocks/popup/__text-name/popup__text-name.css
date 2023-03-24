@@ -1,0 +1,40 @@
+.popup__text-name {
+  width: 358px;
+  border: 0;
+  margin-left: 36px;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+ @media screen and (max-width: 767px) {
+  .popup__text-name {
+    width: 238px;
+    font-size: calc(14/320*100vw);
+    line-height: calc(17/320*100vw);
+    margin-top: 70px;
+    margin-left: 22px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .popup__text-name {
+    width: 358px;
+     font-size: calc(14/768*100vw);
+     line-height: calc(17/768*100vw);
+     margin-top: 54px;
+     margin-left: 36px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .popup__text-name {
+    width: 358px;
+     font-size: calc(14/1024*100vw);
+     line-height: calc(17/1024*100vw);
+     margin-top: 54px;
+     margin-left: 36px;
+  }
+}

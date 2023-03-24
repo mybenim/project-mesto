@@ -1,0 +1,25 @@
+.profile__square {
+   display: inline-block;
+  margin-top: 18px;
+  vertical-align: top;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  border: 1px solid white;
+  background-color:rgba(0, 0, 0, 1);
+  background-image: url(../../../images/vector_pencil.svg);
+  background-repeat: no-repeat;
+}
+
+.profile__square:hover {
+  opacity: 0.6;
+}
+
+ @media screen and (max-width: 767px) {
+  .profile__square {
+    width: 18px;
+    height: 18px;
+    margin-top: 35px;
+  }
+}
+

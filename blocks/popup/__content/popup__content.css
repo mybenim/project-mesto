@@ -1,0 +1,36 @@
+ .popup__content {
+  position: fixed;
+  top: 200px;
+  left: 38%;
+  width: 430px;
+  height: 330px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+ @media screen and (max-width: 767px) {
+  .popup__content {
+    width: 282px;
+    height: 322px;
+    margin: calc(123/320*100%) auto;
+    left: calc(19/320*100%);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .popup__content {
+     width: 430px;
+     height: 330px;
+     margin: 123px auto;
+     left: 25%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .popup__content {
+     width: 430px;
+     height: 330px;
+     margin: 123px auto;
+     left: 30%;
+  }
+}
