@@ -1,24 +1,28 @@
 .popup__safe {
   font-weight: 400;
   font-size: 18px;
-  line-height: 50px;
+  line-height: 22px;
   text-decoration: none;
   text-align: center;
   margin: 48px auto 37px;
-  padding: 0;
+  padding-top: 14px;
+  padding-bottom: 18px;
   display: block;
   width: 358px;
-  height: 50px;
   color: white;
   background-color: black;
   border-radius: 2px;
 }
 
+
  @media screen and (max-width: 767px) {
   .popup__safe {
     width: 238px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: calc(14/320*100vw);
+    line-height: calc(17/320*100vw);
     margin: 45px auto 25px;
-    line-height: 50px;
   }
 }
 
@@ -26,7 +30,7 @@
   .popup__safe {
      width: 358px;
      font-size: calc(18/768*100vw);
-     line-height: 50px;
+     line-height: calc(22/768*100vw);
      margin: 48px auto 37px;
   }
 }
@@ -35,7 +39,7 @@
   .popup__safe {
      width: 358px;
      font-size: calc(18/1024*100vw);
-     line-height: 50px;
+     line-height: calc(22/1024*100vw);
      margin: 48px auto 37px;
   }
 }
