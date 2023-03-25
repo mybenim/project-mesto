@@ -1,0 +1,7 @@
+.element__list-group-like {
+  width: 22px;
+}
+
+.element__list-group-like:hover {
+  opacity: 0.6;
+}
