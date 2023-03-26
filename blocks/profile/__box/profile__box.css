@@ -1,3 +1,10 @@
 .profile__box {
+  display: grid;
+  grid-template-areas:
+  "title square"
+  "subtitle .";
+  grid-template-columns: 1fr min-content;
+  align-items: baseline;
+  max-width: 336px;
   margin: 0;
 }
