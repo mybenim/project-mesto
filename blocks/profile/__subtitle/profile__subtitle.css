@@ -1,33 +1,36 @@
 .profile__subtitle {
-  display: block;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  margin: 0;
-  padding-right: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
-  .profile__subtitle {
-    width: 282px;
-    font-size: calc(14/282*100vw);
-    line-height: calc(17/282*100vw);
-    text-align: center;
-  }
+    .profile__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 36px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .profile__subtitle {
-     max-width: calc(600/720*100%);
-     font-size: calc(18/720*100vw);
-     line-height: calc(22/720*100vw);
-     text-align: center;
-  }
+    .profile__subtitle {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 36px;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-  .profile__subtitle {
-     font-size: calc(18/928*100vw);
-     line-height: calc(22/928*100vw);
-  }
+    .profile__subtitle {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }

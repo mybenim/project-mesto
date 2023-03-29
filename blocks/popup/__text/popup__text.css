@@ -14,8 +14,8 @@
 @media screen and (max-width: 767px) {
     .popup__text {
         width: 238px;
-        font-size: calc(14 / 320 * 100vw);
-        line-height: calc(17 / 320 * 100vw);
+        font-size: 14px;
+        line-height: 17px;
         padding-bottom: 10px;
         margin-top: 30px;
         margin-left: 22px;
@@ -25,8 +25,8 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .popup__text {
         width: 358px;
-        font-size: calc(14 / 768 * 100vw);
-        line-height: calc(17 / 768 * 100vw);
+        font-size: 14px;
+        line-height: 17px;
         padding-bottom: 10px;
         margin-top: 30px;
         margin-left: 36px;
@@ -36,8 +36,8 @@
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .popup__text {
         width: 358px;
-        font-size: calc(14 / 1024 * 100vw);
-        line-height: calc(17 / 1024 * 100vw);
+        font-size: 14px;
+        line-height: 17px;
         padding-bottom: 10px;
         margin-top: 30px;
         margin-left: 36px;

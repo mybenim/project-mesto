@@ -7,7 +7,6 @@
 @import url(../blocks/page/__element/page__element.css);
 @import url(../blocks/page/__footer/page__footer.css);
 @import url(../blocks/page/page.css);
-
 @import url(../blocks/profile/__image/profile__image.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__box/profile__box.css);
@@ -15,7 +14,6 @@
 @import url(../blocks/profile/__square/profile__square.css);
 @import url(../blocks/profile/__subtitle/profile__subtitle.css);
 @import url(../blocks/profile/__rectangle/profile__rectangle.css);
-
 @import url(../blocks/element/__list/element__list.css);
 @import url(../blocks/element/__item-img/element__item-img.css);
 @import url(../blocks/element/__item/element__item.css);
@@ -23,7 +21,6 @@
 @import url(../blocks/element/__title/element__title.css);
 @import url(../blocks/element/__list-group-like-vector/element__list-group-like-vector.css);
 @import url(../blocks/element/__list-group-like/element__list-group-like.css);
-
 @import url(../blocks/footer/__info/footer__info.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/popup_is-opened.css);
@@ -34,3 +31,5 @@
 @import url(../blocks/popup/__text-name/popup__text-name.css);
 @import url(../blocks/popup/__text/popup__text.css);
 @import url(../blocks/popup/__safe/popup__safe.css);
+
+ /* * { outline: 1px solid yellow; } */

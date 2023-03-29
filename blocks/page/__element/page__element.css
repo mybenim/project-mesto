@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 767px) {
     .page__element {
-        padding-top: calc(36 / 320 * 100%);
+        padding-top: 36px;
     }
 }
 

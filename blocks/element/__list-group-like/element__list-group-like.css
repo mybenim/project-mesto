@@ -1,7 +1,8 @@
 .element__list-group-like {
-  width: 22px;
+    width: 22px;
+    height: 19px;
 }
 
 .element__list-group-like:hover {
-  opacity: 0.6;
+    opacity: 0.6;
 }
