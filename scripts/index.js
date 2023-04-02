@@ -1,16 +1,11 @@
-// Проверяем, что подключили
-console.log('Привет мир');
-
-// Делаем выборку DOM
+// выборка DOM
 const popupElement = document.querySelector('.popup');
 const popupCloseButtonElement = popupElement.querySelector('.popup__close');
 const popupOpenButtonElement = document.querySelector('.profile__square');
-console.log(popupOpenButtonElement);
 
 //popup
 const openPopup = function() {
 popupElement.classList.add('popup_is-opened');
-console.log('Open popup clicked');
 };
 
 const closePopup = function() {
@@ -20,41 +15,28 @@ popupElement.classList.remove('popup_is-opened');
 popupOpenButtonElement.addEventListener('click', openPopup);
 popupCloseButtonElement.addEventListener('click', closePopup);
 
-const closePopupByClickOnOverlay = function(event) {
-  console.log (event.target, event.currentTarget);
-  if (event.target !== event.currentTarget) {
-    return;
-  }
-  closePopup();
-};
 
-popupOpenButtonElement.addEventListener('click', openPopup);
-popupCloseButtonElement.addEventListener('click', closePopup);
-popupElement.addEventListener('click', closePopupByClickOnOverlay);
+const popupTextNameElement = popupElement.querySelector ('.popup__input-container_ctrl_fullname');
+const popupTextJobElement = popupElement.querySelector ('.popup__input-container_ctrl_job');
+const profileTitleElement = document.querySelector ('.profile__title');
+const profileSubtitleElement = document.querySelector ('.profile__subtitle');
 
-
-//safe
-const popupSafeElement = popupElement.querySelector('.popup__safe');
-const popupTextNameElement = popupElement.querySelector ('.popup__text-name');
-const popupTextElement = popupElement.querySelector ('.popup__text');
-const popupTitleElement = document.querySelector ('.profile__title');
-const popupSubtitleElement = document.querySelector ('.profile__subtitle');
-
+  popupOpenButtonElement.addEventListener('click', () => {
+  openPopup(popupOpenButtonElement);
+  popupTextNameElement.value = profileTitleElement.textContent;
+  popupTextJobElement.value = profileSubtitleElement.textContent;
+});
+ popupCloseButtonElement.addEventListener('submit', (event) => {
+ event.preventDefault();
+ profileTitleElement.textContent = popupTextNameElement.value;
+ profileSubtitleElement.textContent = popupTextJobElement.value;
+});
 
 function handleFormSubmit (event) {
     event.preventDefault();
 
-const popupTextNameElement = popupElement.querySelector ('.popup__text-name').value;
-console.log(popupTextNameElement);
-
-const popupTextElement = popupElement.querySelector ('.popup__text').value;
-console.log(popupTextElement);
-
-const popupTitleElement = document.querySelector ('.profile__title').textContent = popupTextNameElement;
-
-const popupSubtitleElement = document.querySelector ('.profile__subtitle').textContent = popupTextElement;
-
-
+const formElement = document.getElementById('formElement');
+const handleFormSubmit = document.getElementById('handleFormSubmit');
 formElement.addEventListener('submit', handleFormSubmit);
 
 closePopup();

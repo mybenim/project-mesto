@@ -27,17 +27,15 @@
               alt="Жак-Ив Кусто">
             <div class="profile__box">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button
+              <button aria-label="Редактировать"
                 class="profile__square"
-                type="button"
-                aria-label="Редактировать">
+                type="button">
               </button>
               <p class="profile__subtitle">Исследователь океана, фотограф, режиссёр, изобретатель, автор множества книг и фильмов </p>
-            </div>
-            <button
+             </div>
+            <button aria-label="Плюс"
               class="profile__rectangle"
-              type="button"
-              aria-label="плюс">
+              type="button">
             </button>
             </div>
         </section>
@@ -46,112 +44,113 @@
 
         <section class="element page__element">
           <ul class="element__list">
-            <li class="element__item">
-              <img
-                src="./images/cetaceans.jpg"
+            <li>
+              <div class="element__item">
+               <img src="./images/cetaceans.jpg"
                 class="element__item-img"
                 alt="Китообразные">
               <div class="element__group">
                 <h2 class="element__title">Китообразные</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
+                <button aria-label="Like" type="button"
+                  class="element__button element__button-like">
+                  <img src="./images/vector_like.svg"
                     class="element__list-group element__list-group-like-vector"
                     alt="лайк">
-                </a>
+                </button>
+              </div>
               </div>
             </li>
-            <li class="element__item">
+
+            <li>
+              <div class="element__item">
               <img
                 src="./images/gibraltar.jpg"
                 class="element__item-img"
                 alt="Гибралтарский пролив">
               <div class="element__group">
                 <h2 class="element__title">Гибралтар</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
+                <button aria-label="Like" type="button"
+                  class="element__button element__button-like">
+                  <img src="./images/vector_like.svg"
                     class="element__list-group element__list-group-like-vector"
                     alt="лайк">
-                </a>
+                </button>
+              </div>
               </div>
             </li>
-            <li class="element__item">
+
+            <li>
+              <div class="element__item">
               <img
                 src="./images/Museum_Monaco.jpg"
                 class="element__item-img"
                 alt="Океанографический музей в Монако">
               <div class="element__group">
                 <h2 class="element__title">Океанографический музей в Монако</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
+                <button aria-label="Like" type="button"
+                  class="element__button element__button-like">
+                  <img src="./images/vector_like.svg"
                     class="element__list-group element__list-group-like-vector"
                     alt="лайк">
-                </a>
+                </button>
               </div>
-            </li>
-            <li class="element__item">
-              <img
-                src="./images/calypso.jpg"
-                class="element__item-img"
-                alt="корабль Калипсо">
-              <div class="element__group">
-                <h2 class="element__title">Калипсо</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </a>
-              </div>
-            </li>
-            <li class="element__item">
-              <img
-                src="./images/bathyscaphe.jpg"
-                class="element__item-img"
-                alt="Подводная лодка Жак-Ива Кусто">
-              <div class="element__group">
-                <h2 class="element__title">Батискаф</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </a>
               </div>
             </li>
 
-            <li class="element__item">
-              <img
-                src="./images/alcyone.jpg"
+            <li>
+              <div class="element__item">
+                <img
+                src="./images/calypso.jpg"
                 class="element__item-img"
-                alt="судно Алкиона">
-              <div class="element__group">
-                <h2 class="element__title">Алкиона</h2>
-                <a
-                  href="#"
-                  class="element__list-group element__list-group-like">
-                  <img
-                    src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </a>
+                 alt="корабль Калипсо">
+                  <div class="element__group">
+                   <h2 class="element__title">Калипсо</h2>
+                    <button aria-label="Like" type="button"
+                     class="element__button element__button-like">
+                     <img src="./images/vector_like.svg"
+                      class="element__list-group element__list-group-like-vector"
+                      alt="лайк">
+                </button>
+               </div>
               </div>
-            </li>
-          </ul>
-        </section>
-      </main>
+             </li>
+
+            <li>
+             <div class="element__item">
+              <img src="./images/bathyscaphe.jpg"
+               class="element__item-img"
+                alt="Подводная лодка Жак-Ива Кусто">
+                <div class="element__group">
+                  <h2 class="element__title">Батискаф</h2>
+                   <button aria-label="Like" type="button"
+                    class="element__button element__button-like">
+                     <img src="./images/vector_like.svg"
+                      class="element__list-group element__list-group-like-vector"
+                       alt="лайк">
+                   </button>
+                  </div>
+                 </div>
+                </li>
+
+            <li>
+              <div class="element__item">
+              <img src="./images/alcyone.jpg"
+               class="element__item-img"
+                alt="судно Алкиона">
+                 <div class="element__group">
+                  <h2 class="element__title">Алкиона</h2>
+                   <button aria-label="Like" type="button"
+                    class="element__button element__button-like">
+                     <img src="./images/vector_like.svg"
+                      class="element__list-group element__list-group-like-vector"
+                       alt="лайк">
+                     </button>
+                  </div>
+                 </div>
+               </li>
+             </ul>
+          </section>
+       </main>
 
 
     <!-- Секция footer -->
@@ -164,20 +163,23 @@
     <!-- Секция popup -->
 
     <section class="popup">
-      <div class="popup__content">
-        <button class="popup__close"></button>
+      <button aria-label="Close" type="button" class="popup__close"></button>
+      <div class="popup__container">
         <h3 class="popup__title">Редактировать профиль</h3>
-        <input
-          type="text"
-          class="popup__text-name"
-          placeholder="Жак-Ив Кусто">
-        <div class="popup__line"></div>
-        <input
-          type="text"
-          class="popup__text"
-          placeholder="Исследователь океана">
-        <div class="popup__line"></div>
-        <a href="#" class="popup__safe">Сохранить</a>
+
+        <form class="popup__form">
+          <input type="text"
+           class="popup__input-container popup__input-container_ctrl_fullname"
+            name="fullname" placeholder="Жак-Ив Кусто">
+            <div class="popup__line"></div>
+
+            <input type="text"
+            class="popup__input-container popup__input-container_ctrl_job"
+           name="job" placeholder="Исследователь океана">
+          <div class="popup__line"></div>
+        </form>
+
+       <button type="button" class="popup__safe">Сохранить</button>
       </div>
     </section>
 

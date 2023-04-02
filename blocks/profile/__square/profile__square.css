@@ -1,24 +1,26 @@
 .profile__square {
-  margin-top: 35px;
-  width: 24px;
-  height: 24px;
-  background-position: center;
-  border: 1px solid white;
-  background-color:rgba(0, 0, 0, 1);
-  background-image: url(../../../images/vector_pencil.svg);
-  background-repeat: no-repeat;
+    margin-top: 17px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../../../images/vector_pencil.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
 }
 
 .profile__square:hover {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
- @media screen and (max-width: 767px) {
-  .profile__square {
-    width: 18px;
-    height: 18px;
-    margin-top: 23px;
-  }
+@media screen and (max-width: 767px) {
+    .profile__square {
+        width: 18px;
+        height: 18px;
+        margin-top: 23px;
+        background-size: 7.5px;
+    }
 }
-
-

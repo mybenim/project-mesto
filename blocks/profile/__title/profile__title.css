@@ -3,7 +3,6 @@
     line-height: 48px;
     font-weight: 500;
     margin: 0;
-    padding-top: 22px;
     padding-right: 18px;
     padding-bottom: 12px;
     text-overflow: ellipsis;
@@ -22,16 +21,5 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .profile__title {
-        font-size: calc(42/768*100vw);
-        line-height: calc(48/768*100vw);
-    }
-}
 
-@media screen and (min-width: 1024px) and (max-width: 1279px) {
-    .profile__title {
-        font-size: calc(42/1024*100vw);
-        line-height: calc(48/1024*100vw);
-    }
-}
+
