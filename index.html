@@ -1,189 +1,138 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>Проек "Место"</title>
-  </head>
-  <body class="page">
-    <div class="page__content">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">
+        <title>Проек "Место"</title>
+    </head>
+    <body class="page">
+        <div class="page__content">
 
-      <!-- Секция header -->
+            <!-- Секция header -->
 
-      <header class="header page__header">
-        <img src="./images/logo.svg" class="header__logo" alt="логотип">
-      </header>
+            <header class="header page__header">
+                <img src="./images/logo.svg" class="header__logo" alt="логотип">
+            </header>
 
-      <!-- Секция profile -->
+            <!-- Секция profile -->
 
-      <main class="main">
-        <section class="profile page__profile">
-          <div class="profile__info">
-            <img
-              src="./images/image.jpg"
-              class="profile__image"
-              alt="Жак-Ив Кусто">
-            <div class="profile__box">
-              <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button aria-label="Редактировать"
-                class="profile__square"
-                type="button">
-              </button>
-              <p class="profile__subtitle">Исследователь океана, фотограф, режиссёр, изобретатель, автор множества книг и фильмов </p>
-             </div>
-            <button aria-label="Плюс"
-              class="profile__rectangle"
-              type="button">
-            </button>
+            <main class="main">
+                <section class="profile page__profile">
+                    <div class="profile__info">
+                        <img src="./images/image.jpg" class="profile__image" alt="Жак-Ив Кусто">
+                        <div class="profile__box">
+                            <h1 class="profile__title">Жак-Ив Кусто</h1>
+                            <button aria-label="Редактировать" class="profile__square" type="button"></button>
+                            <p class="profile__subtitle">Исследователь океана, фотограф, режиссёр, изобретатель, автор множества книг и фильмов</p>
+                        </div>
+                        <button aria-label="Плюс" class="profile__rectangle" type="button"></button>
+                    </div>
+                </section>
+
+                <!-- Секция еlement -->
+
+                <section class="element page__element">
+                    <ul class="element__list">
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/cetaceans.jpg" class="element__item-img" alt="Китообразные">
+                                <div class="element__group">
+                                    <h2 class="element__title">Китообразные</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/gibraltar.jpg" class="element__item-img" alt="Гибралтарский пролив">
+                                <div class="element__group">
+                                    <h2 class="element__title">Гибралтар</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/Museum_Monaco.jpg" class="element__item-img" alt="Океанографический музей в Монако">
+                                <div class="element__group">
+                                    <h2 class="element__title">Океанографический музей в Монако</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/calypso.jpg" class="element__item-img" alt="корабль Калипсо">
+                                <div class="element__group">
+                                    <h2 class="element__title">Калипсо</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/bathyscaphe.jpg" class="element__item-img" alt="Подводная лодка Жак-Ива Кусто">
+                                <div class="element__group">
+                                    <h2 class="element__title">Батискаф</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li class="element__item">
+                            <article class="card">
+                                <img src="./images/alcyone.jpg" class="element__item-img" alt="судно Алкиона">
+                                <div class="element__group">
+                                    <h2 class="element__title">Алкиона</h2>
+                                    <button aria-label="Like" type="button" class="element__button element__button-like">
+                                        <img src="./images/vector_like.svg" class="element__like-icon" alt="лайк">
+                                    </button>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+
+            <!-- Секция footer -->
+
+            <footer class="footer page__footer">
+                <p class="footer__info">&copy; 2023. Mesto - France, Monaco, Spain</p>
+            </footer>
+        </div>
+
+        <!-- Секция popup -->
+
+        <section class="popup">
+            <div class="popup__container">
+                <button aria-label="Close" type="button" class="popup__close"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+
+                <form name="safe" action="обработчик" method="post" class="popup__form">
+                    <input type="text" class="popup__input-container popup__input-container_ctrl_fullname" name="fullname" placeholder="Жак-Ив Кусто" required>
+                    <input type="text" class="popup__input-container popup__input-container_ctrl_job" name="job" placeholder="Исследователь океана" required>
+                    <button type="submit" class="popup__safe">Сохранить</button>
+                </form>
             </div>
         </section>
 
-        <!-- Секция еlement -->
-
-        <section class="element page__element">
-          <ul class="element__list">
-            <li>
-              <div class="element__item">
-               <img src="./images/cetaceans.jpg"
-                class="element__item-img"
-                alt="Китообразные">
-              <div class="element__group">
-                <h2 class="element__title">Китообразные</h2>
-                <button aria-label="Like" type="button"
-                  class="element__button element__button-like">
-                  <img src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </button>
-              </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="element__item">
-              <img
-                src="./images/gibraltar.jpg"
-                class="element__item-img"
-                alt="Гибралтарский пролив">
-              <div class="element__group">
-                <h2 class="element__title">Гибралтар</h2>
-                <button aria-label="Like" type="button"
-                  class="element__button element__button-like">
-                  <img src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </button>
-              </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="element__item">
-              <img
-                src="./images/Museum_Monaco.jpg"
-                class="element__item-img"
-                alt="Океанографический музей в Монако">
-              <div class="element__group">
-                <h2 class="element__title">Океанографический музей в Монако</h2>
-                <button aria-label="Like" type="button"
-                  class="element__button element__button-like">
-                  <img src="./images/vector_like.svg"
-                    class="element__list-group element__list-group-like-vector"
-                    alt="лайк">
-                </button>
-              </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="element__item">
-                <img
-                src="./images/calypso.jpg"
-                class="element__item-img"
-                 alt="корабль Калипсо">
-                  <div class="element__group">
-                   <h2 class="element__title">Калипсо</h2>
-                    <button aria-label="Like" type="button"
-                     class="element__button element__button-like">
-                     <img src="./images/vector_like.svg"
-                      class="element__list-group element__list-group-like-vector"
-                      alt="лайк">
-                </button>
-               </div>
-              </div>
-             </li>
-
-            <li>
-             <div class="element__item">
-              <img src="./images/bathyscaphe.jpg"
-               class="element__item-img"
-                alt="Подводная лодка Жак-Ива Кусто">
-                <div class="element__group">
-                  <h2 class="element__title">Батискаф</h2>
-                   <button aria-label="Like" type="button"
-                    class="element__button element__button-like">
-                     <img src="./images/vector_like.svg"
-                      class="element__list-group element__list-group-like-vector"
-                       alt="лайк">
-                   </button>
-                  </div>
-                 </div>
-                </li>
-
-            <li>
-              <div class="element__item">
-              <img src="./images/alcyone.jpg"
-               class="element__item-img"
-                alt="судно Алкиона">
-                 <div class="element__group">
-                  <h2 class="element__title">Алкиона</h2>
-                   <button aria-label="Like" type="button"
-                    class="element__button element__button-like">
-                     <img src="./images/vector_like.svg"
-                      class="element__list-group element__list-group-like-vector"
-                       alt="лайк">
-                     </button>
-                  </div>
-                 </div>
-               </li>
-             </ul>
-          </section>
-       </main>
-
-
-    <!-- Секция footer -->
-
-    <footer class="footer page__footer">
-      <p class="footer__info">&copy; 2023. Mesto - France, Monaco, Spain</p>
-    </footer>
-    </div>
-
-    <!-- Секция popup -->
-
-    <section class="popup">
-      <button aria-label="Close" type="button" class="popup__close"></button>
-      <div class="popup__container">
-        <h3 class="popup__title">Редактировать профиль</h3>
-
-        <form class="popup__form">
-          <input type="text"
-           class="popup__input-container popup__input-container_ctrl_fullname"
-            name="fullname" placeholder="Жак-Ив Кусто">
-            <div class="popup__line"></div>
-
-            <input type="text"
-            class="popup__input-container popup__input-container_ctrl_job"
-           name="job" placeholder="Исследователь океана">
-          <div class="popup__line"></div>
-        </form>
-
-       <button type="button" class="popup__safe">Сохранить</button>
-      </div>
-    </section>
-
-    <!-- Секция script -->
-    <script src="./scripts/index.js"></script>
-  </body>
+        <!-- Секция script -->
+        <script src="./scripts/index.js"></script>
+    </body>
 </html>

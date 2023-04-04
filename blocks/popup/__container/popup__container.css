@@ -1,10 +1,11 @@
 .popup__container {
+    position: relative;
     display: grid;
     flex-direction: column;
     align-self: center;
     margin: auto;
     width: 430px;
-    max-height: 330px;
+    min-height: 330px;
     background-color: white;
     border-radius: 10px;
 }
@@ -12,7 +13,7 @@
 @media screen and (max-width: 767px) {
     .popup__container {
         width: 282px;
-        max-height: 322px;
+        min-height: 322px;
     }
 }
 

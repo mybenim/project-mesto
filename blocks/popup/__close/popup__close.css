@@ -1,11 +1,11 @@
 .popup__close {
     position: absolute;
-    top: 28%;
-    left: 67%;
+    top: -45px;
+    right: -40px;
     width: 32px;
     height: 32px;
     background-image: url(../../../images/close.svg);
-    background-color: rgba(28, 28, 28, 0);
+    background-color: transparent;
     border: 0;
     background-size: cover;
     cursor: pointer;
@@ -17,21 +17,19 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .popup__close {
-        top: 27%;
-        left: 71%;
+      right: -40;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .popup__close {
-        top: 28%;
-        left: 79%;
+        background-image: url(../../../images/close.svg);
+        right: -38px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .popup__close {
-        top: 28%;
-        left: 84%;
+        right: 0;
     }
 }

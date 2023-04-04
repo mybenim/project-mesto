@@ -2,6 +2,7 @@
     display: block;
     width: 358px;
     border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
     margin-bottom: 0;
     padding-bottom: 11px;
     font-weight: 400;
@@ -12,9 +13,8 @@
     cursor: pointer;
 }
 
-input:focus {
+.popup__input-container:focus {
   outline-color: #fff6c5;
-    /* border-bottom: 1px solid rgb(0, 0, 0, 0.2);*/
 }
 
 @media screen and (max-width: 767px) {
