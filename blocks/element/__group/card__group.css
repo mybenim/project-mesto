@@ -1,7 +1,8 @@
-.element__group {
+.card__group {
   width: 246px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 20px;
+  padding-bottom: 27px;
   display: flex;
   align-items: center;
   justify-content: space-between;
