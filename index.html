@@ -59,8 +59,8 @@
                     aria-label="Like"
                     type="button"
                     class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
+                      <img id="like"
+                      src="/images/vector_like.svg" onclick="changeImage(this.id)"
                       class="card__like-icon"
                       alt="лайк">
                   </button>
@@ -208,6 +208,7 @@
     </section>
 
     <!-- Секция script -->
+    <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
