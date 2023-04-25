@@ -20,17 +20,10 @@ function handleFormSubmit(event) {
     event.preventDefault();
     popupTitleElement.textContent = nameInput.value;
     popupJobElement.textContent = jobInput.value;
-
-    const closePopupVisibility = function () {
-        popupElement.classList.remove("popup_opened");
-    };
-    popupCloseButtonElement.addEventListener("click", closePopupVisibility);
-
-    const popupSafeElement = function () {
-        popupElement.classList.remove("popup_opened");
-    };
-    popupElement.addEventListener("click", popupSafeElement);
+    popupElement.classList.remove("popup_opened");
 };
 
-
-
+const closePopupVisibility = function () {
+    popupElement.classList.remove("popup_opened");
+};
+popupCloseButtonElement.addEventListener("click", closePopupVisibility);
