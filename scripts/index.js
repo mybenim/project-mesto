@@ -20,10 +20,12 @@ function handleFormSubmit(event) {
     event.preventDefault();
     popupTitleElement.textContent = nameInput.value;
     popupJobElement.textContent = jobInput.value;
-    popupElement.classList.remove("popup_opened");
+    closePopupVisibility();
 };
 
 const closePopupVisibility = function () {
     popupElement.classList.remove("popup_opened");
 };
 popupCloseButtonElement.addEventListener("click", closePopupVisibility);
+
+  /* :) */
