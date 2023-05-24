@@ -1,214 +1,137 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>Проек "Место"</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-  </head>
-  <body class="page">
-    <div class="page__content">
+    <head>
+        <title>Проек "Место"</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./pages/index.css">
+    </head>
+    <body class="page">
+        <div class="page__content">
 
-      <!-- Секция header -->
+          <!-- Секция header -->
 
-      <header class="header page__header">
-        <img src="./images/logo.svg" class="header__logo" alt="логотип">
-      </header>
+            <header class="header page__header">
+                <img src="./images/logo.svg" class="header__logo" alt="логотип">
+            </header>
 
-      <!-- Секция profile -->
+            <!-- Секция profile -->
 
-      <main class="main">
-        <section class="profile page__profile">
-          <div class="profile__info">
-            <img
-              src="./images/image.jpg"
-              class="profile__image"
-              alt="Жак-Ив Кусто">
-            <div class="profile__box">
-              <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button
-                aria-label="Редактировать"
-                class="profile__square"
-                type="button">
+            <main class="main">
+                <section class="profile page__profile">
+                    <div class="profile__info">
+                        <img src="./images/image.jpg"
+                         class="profile__image"
+                         alt="Жак-Ив Кусто">
+                        <div class="profile__box">
+                            <h1 class="profile__title">Жак-Ив Кусто</h1>
+                            <button aria-label="Редактировать"
+                            class="profile__square"
+                            type="button"></button>
+                            <p class="profile__subtitle">Исследователь океана, учёный, изобретатель.</p>
+                        </div>
+                        <button aria-label="плюс"
+                        class="profile__rectangle"
+                        type="button"></button>
+                    </div>
+                </section>
+
+                <!-- Секция еlement -->
+
+                <section class="element page__element">
+                    <ul class="element__list">
+                    </ul>
+                </section>
+            </main>
+
+            <template id="card-template">
+                <article class="card">
+                    <button class="card__basket">
+                    </button>
+                    <img src="#" class="card__item-img" alt="#">
+                    <div class="card__group">
+                        <h2 class="card__title"></h2>
+                        <button class="card__like-icon">
+                        </button>
+                    </div>
+                </article>
+            </template>
+
+            <!-- Секция footer -->
+
+            <footer class="footer page__footer">
+                <p class="footer__info">&copy; 2023. France, Monaco, Spain</p>
+            </footer>
+        </div>
+
+        <!-- Секция popup -->
+
+        <div class="popup">
+            <div class="popup__container">
+                <button aria-label="Close"
+                  type="button" id="close"
+                  class="popup__close">
               </button>
-              <p class="profile__subtitle">Исследователь океана, учёный, изобретатель.
-              </p>
+                <h3 class="popup__title">Редактировать профиль</h3>
+
+                <form name="safe"
+                  method="post"
+                  class="popup__form">
+                    <input type="text"
+                      class="popup__input-container popup__input-container_ctrl_fullname"
+                      name="fullname"
+                      placeholder="Жак-Ив Кусто" required>
+                    <input type="text"
+                      class="popup__input-container popup__input-container_ctrl_job"
+                      name="job"
+                      placeholder="Исследователь океана" required>
+                    <button type="submit"
+                      class="popup__safe">Сохранить</button>
+                </form>
             </div>
-            <button
-              aria-label="плюс"
-              class="profile__rectangle"
-              type="button">
-            </button>
-          </div>
-        </section>
+        </div>
 
-        <!-- Секция еlement -->
+        <div class="popup popup__location">
+            <div class="popup__container-new">
+                <button aria-label="Close"
+                 type="button" id="close-new"
+                 class="popup__close">
+              </button>
+                <h3 class="popup__title-new">Новое место</h3>
 
-        <section class="element page__element">
-          <ul class="element__list">
-            <li class="element__item">
-              <article class="card">
-                  <img
-                  src="./images/cetaceans.jpg"
-                  class="card__item-img"
-                  alt="Китообразные">
-                <div class="card__group">
-                  <h2 class="card__title">Китообразные</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
+                <form name="safe"
+                method="post"
+                class="popup__form-new">
+                    <input type="text"
+                      class="popup__input-container popup__input-container_ctrl_name"
+                      name="name"
+                      placeholder="Название" required>
+                    <input type="text"
+                      class="popup__input-container popup__input-container_ctrl_link"
+                      name="link"
+                      placeholder="Ссылка на картинку" required>
+                    <button type="submit"
+                     class="popup__create">Создать</button>
+                </form>
+            </div>
+        </div>
 
-            <li class="element__item">
-              <article class="card">
-                  <img
-                  src="./images/gibraltar.jpg"
-                  class="card__item-img"
-                  alt="Гибралтарский пролив">
-                <div class="card__group">
-                  <h2 class="card__title">Гибралтар</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
+        <div class="popup popup__image">
+             <div class="popup__container-image">
+                <figure class="popup__container-block">
+                <img src="#" class="popup__item-img" alt="#">
+                <figcaption class="popup__caption"></figcaption>
+                </figure>
+            <button aria-label="Close"
+            type="button" id="close-image"
+            class="popup__close">
+          </button>
+            </div>
+        </div>
 
-            <li class="element__item">
-              <article class="card">
-                  <img
-                  src="./images/Museum_Monaco.jpg"
-                  class="card__item-img"
-                  alt="Океанографический музей в Монако">
-                <div class="card__group">
-                  <h2 class="card__title">Океанографический музей в Монако</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
+        <!-- Секция script -->
 
-            <li class="element__item">
-              <article class="card">
-                  <img
-                  src="./images/calypso.jpg"
-                  class="card__item-img"
-                  alt="корабль Калипсо">
-                <div class="card__group">
-                  <h2 class="card__title">Калипсо</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
-
-            <li class="element__item">
-              <article class="card">
-                  <img
-                  src="./images/bathyscaphe.jpg"
-                  class="card__item-img"
-                  alt="Подводная лодка Жак-Ива Кусто">
-                <div class="card__group">
-                  <h2 class="card__title">Батискаф</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                      <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
-
-            <li class="element__item">
-              <article class="card">
-                <img
-                  src="./images/alcyone.jpg"
-                  class="card__item-img"
-                  alt="судно Алкиона">
-                <div class="card__group">
-                  <h2 class="card__title">Алкиона</h2>
-                  <button
-                    aria-label="Like"
-                    type="button"
-                    class="card__button-like">
-                    <img
-                      src="./images/vector_like.svg"
-                      class="card__like-icon"
-                      alt="лайк">
-                  </button>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </section>
-      </main>
-
-      <!-- Секция footer -->
-
-      <footer class="footer page__footer">
-        <p class="footer__info">&copy; 2023. France, Monaco, Spain</p>
-      </footer>
-    </div>
-
-    <!-- Секция popup -->
-
-    <section class="popup">
-      <div class="popup__container">
-        <button aria-label="Close" type="button" class="popup__close"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-
-        <form name="safe" method="post" class="popup__form">
-          <input type="text"
-            class="popup__input-container popup__input-container_ctrl_fullname"
-            name="fullname"
-            placeholder="Жак-Ив Кусто"
-            required>
-          <input type="text"
-            class="popup__input-container popup__input-container_ctrl_job"
-            name="job"
-            placeholder="Исследователь океана"
-            required>
-          <button type="submit" class="popup__safe">Сохранить</button>
-        </form>
-
-      </div>
-    </section>
-
-    <!-- Секция script -->
-
-    <script src="./scripts/index.js"></script>
-  </body>
+        <script src="./scripts/index.js"></script>
+    </body>
 </html>
