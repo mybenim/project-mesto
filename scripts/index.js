@@ -32,15 +32,16 @@ const nameInput = document.querySelector(".popup__input-container_ctrl_fullname"
 const jobInput = document.querySelector(".popup__input-container_ctrl_job");
 const popupElement = document.querySelector(".popup");
 const popupCloseButtonElement = document.querySelectorAll(".popup__close");
-const imageOpenPopup = document.querySelector(".popup__image");
 const imageCaptionPopup = document.querySelector(".popup__caption");
 const picture = document.querySelector(".popup__item-img");
-const popupNewLocation = document.querySelector(".popup__location");
+const popupNewLocation = document.querySelector(".popup__container-new");
 const popupButtonCreate = popupNewLocation.querySelector(".popup__create");
 const linkInput = popupNewLocation.querySelector(".popup__input-container_ctrl_link");
 const newNameInput = popupNewLocation.querySelector(".popup__input-container_ctrl_name");
 const sendNewForm = popupNewLocation.querySelector(".popup__form-new");
 const formElement = popupElement.querySelector(".popup__form");
+const newLocation = document.querySelector(".popup_type_location");
+const imagePopup = document.querySelector(".popup_type_image");
 
 // Popup   ---------------------
 const togglePopupVisibility = function () {
@@ -73,12 +74,12 @@ function openPopup(popupToOpen) {
     popupToOpen.classList.add("popup_opened");
 }
 document.querySelector(".profile__rectangle").addEventListener("click", () => {
-    openPopup(popupNewLocation);
+    openPopup(newLocation);
 });
 
 // Кнопка закрытия для popup Новое место
 const closePopupNewVisibility = function () {
-    popupNewLocation.classList.remove("popup_opened");
+    newLocation.classList.remove("popup_opened");
 };
 popupCloseButtonElement.forEach((closeButtonElement) => {
     popup = closeButtonElement.closest(".popup");
@@ -87,7 +88,7 @@ popupCloseButtonElement.forEach((closeButtonElement) => {
 
 // Кнопка закрытия для popup с картинкой
 const closePopupImageVisibility = function () {
-    imageOpenPopup.classList.remove("popup_opened");
+    imagePopup.classList.remove("popup_opened");
 };
 popupCloseButtonElement.forEach((closeButtonElement) => {
     popup = closeButtonElement.closest(".popup");
@@ -117,7 +118,7 @@ function createCard(link, name) {
 
     //Функция открытия попапа с картинкой
     itemElement.querySelector(".card__item-img").addEventListener("click", () => {
-        imageOpenPopup.classList.toggle("popup_opened");
+        imagePopup.classList.toggle("popup_opened");
         imageCaptionPopup.textContent = name;
         picture.src = link;
         picture.alt = name;
@@ -146,7 +147,7 @@ popupButtonCreate.addEventListener("click", (event) => {
 
 popupButtonCreate.addEventListener("click", (event) => {
     event.preventDefault();
-    popupNewLocation.classList.toggle("popup_opened");
+    newLocation.classList.toggle("popup_opened");
     linkInput.value = "";
     newNameInput.value = "";
 });

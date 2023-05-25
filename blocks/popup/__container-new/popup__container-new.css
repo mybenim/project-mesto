@@ -1,4 +1,4 @@
-.popup__container {
+.popup__container-new {
     position: relative;
     display: grid;
     flex-direction: column;
@@ -10,10 +10,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .popup__container {
+    .popup__container-new {
         width: 282px;
     }
 }
-
-
-
