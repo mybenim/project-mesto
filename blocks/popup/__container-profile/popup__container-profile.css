@@ -1,5 +1,5 @@
-.popup__container-new {
-    position: relative;
+.popup__container-profile {
+   position: relative;
     display: grid;
     flex-direction: column;
     align-self: center;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .popup__container-new {
+    .popup__container-profile {
         width: 282px;
     }
 }

@@ -29,7 +29,7 @@
                             <button aria-label="Редактировать"
                             class="profile__square"
                             type="button"></button>
-                            <p class="profile__subtitle">Исследователь океана, учёный, изобретатель.</p>
+                            <p class="profile__subtitle">Ваша профессия</p>
                         </div>
                         <button aria-label="плюс"
                         class="profile__rectangle"
@@ -67,17 +67,17 @@
 
         <!-- Секция popup -->
 
-        <div class="popup">
-            <div class="popup__container">
-                <button aria-label="Close"
+        <section class="popup" data-popup-name="popup-profile">
+            <div class="popup__container popup__container-profile">
+                <button aria-label="close"
                   type="button" id="close"
-                  class="popup__close">
-              </button>
+                  class="popup__close popup__close-profile">
+               </button>
                 <h3 class="popup__title">Редактировать профиль</h3>
 
                 <form name="safe"
                   method="post"
-                  class="popup__form">
+                  class="popup__form popup__form-profile">
                     <input type="text"
                       class="popup__input-container popup__input-container_ctrl_fullname"
                       name="fullname"
@@ -90,24 +90,24 @@
                       class="popup__safe">Сохранить</button>
                 </form>
             </div>
-        </div>
+        </section>
 
-        <div class="popup popup_type_location">
-            <div class="popup__container-new">
-                <button aria-label="Close"
-                 type="button" id="close-new"
-                 class="popup__close">
+        <section class="popup" data-popup-name="popup-card">
+            <div class="popup__container popup__container-card">
+                <button aria-label="close"
+                 type="button" id="close-card"
+                 class="popup__close popup__close-card">
               </button>
                 <h3 class="popup__title-new">Новое место</h3>
 
                 <form name="safe"
                 method="post"
-                class="popup__form-new">
+                class="popup__form popup__form-card">
                     <input type="text"
                       class="popup__input-container popup__input-container_ctrl_name"
                       name="name"
                       placeholder="Название" required>
-                    <input type="text"
+                    <input type="url"
                       class="popup__input-container popup__input-container_ctrl_link"
                       name="link"
                       placeholder="Ссылка на картинку" required>
@@ -115,20 +115,20 @@
                      class="popup__create">Создать</button>
                 </form>
             </div>
-        </div>
+        </section>
 
-        <div class="popup popup_type_image">
-             <div class="popup__image">
-                <figure class="popup__container-image">
+        <section class="popup" data-popup-name="popup-image">
+             <div class="popup__container popup__container-image">
+                <figure class="popup__image">
                 <img src="#" class="popup__item-img" alt="#">
                 <figcaption class="popup__caption"></figcaption>
                 </figure>
-            <button aria-label="Close"
+            <button aria-label="close"
             type="button" id="close-image"
-            class="popup__close">
+            class="popup__close popup__close-image">
           </button>
             </div>
-        </div>
+        </section>
 
         <!-- Секция script -->
 

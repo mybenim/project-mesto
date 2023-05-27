@@ -1,4 +1,8 @@
 .popup__container-image {
-  margin: 0;
-  padding: 0;
+   position: relative;
+   margin: auto;
+   background: none;
+   object-fit: cover;
+   width: 75vw;
+   height: 75vh;
 }
