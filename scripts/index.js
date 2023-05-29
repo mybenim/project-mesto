@@ -61,8 +61,7 @@ function openPopupProfile() {
     openPopup(popupOpenProfile);
 }
 
-function handleFormSubmitProfile(event) {
-    event.preventDefault();
+function handleFormSubmitProfile() {
     nameTitleProfile.textContent = inputFullNameProfile.value;
     JobProfile.textContent = inputjobProfile.value;
     formProfileSubmit.reset();
@@ -127,6 +126,14 @@ document.querySelector(".profile__rectangle").addEventListener("click", () => {
     openPopup(popupOpenAddNewCard);
 });
 
+// Обработчик формы
+formProfileSubmit.addEventListener("submit", (event) => {
+    event.preventDefault();
+    handleFormSubmitProfile(inputFullNameProfile, inputjobProfile);
+    formProfileSubmit.reset();
+    closePopup(popupOpenProfile);
+});
+
 // Обработчик формы добавления карточки
 formNewAddCardSubmit.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -134,6 +141,3 @@ formNewAddCardSubmit.addEventListener("submit", (event) => {
     formNewAddCardSubmit.reset();
     closePopup(popupOpenAddNewCard);
 });
-
-// Обработчик формы отправки
-formProfileSubmit.addEventListener("submit", handleFormSubmitProfile);
