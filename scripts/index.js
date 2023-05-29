@@ -127,17 +127,13 @@ document.querySelector(".profile__rectangle").addEventListener("click", () => {
     openPopup(popupOpenAddNewCard);
 });
 
-buttonCreateCardSubmit.addEventListener("click", () => {
-    closePopup(popupOpenAddNewCard);
-    });
-
-// Обработчик фориы добавления карточки
+// Обработчик формы добавления карточки
 formNewAddCardSubmit.addEventListener("submit", (event) => {
     event.preventDefault();
     handleFormSubmitAddCard(inputLinkFormAddNewCard, inputNameFormAddNewCard);
     formNewAddCardSubmit.reset();
+    closePopup(popupOpenAddNewCard);
 });
 
-//Обработчик отправки функции создания карточки
+// Обработчик формы отправки
 formProfileSubmit.addEventListener("submit", handleFormSubmitProfile);
-//formNewAddCardSubmit.addEventListener("submit", handleFormSubmitAddCard);
