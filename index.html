@@ -10,7 +10,7 @@
     <body class="page">
         <div class="page__content">
 
-          <!-- Секция header -->
+            <!-- Секция header -->
 
             <header class="header page__header">
                 <img src="./images/logo.svg" class="header__logo" alt="логотип">
@@ -37,7 +37,7 @@
                     </div>
                 </section>
 
-                <!-- Секция еlement -->
+            <!-- Секция еlement -->
 
                 <section class="element page__element">
                     <ul class="element__list">
@@ -65,73 +65,66 @@
             </footer>
         </div>
 
-        <!-- Секция popup -->
+            <!-- Секция popup -->
 
-        <section class="popup" data-popup-name="popup-profile">
-            <div class="popup__container popup__container-profile">
-                <button aria-label="close"
-                  type="button" id="close"
-                  class="popup__close popup__close-profile">
-               </button>
-                <h3 class="popup__title">Редактировать профиль</h3>
+  <section class="popup" data-popup-name="popup-profile">
+    <div class="popup__container">
+        <button aria-label="close" type="button" id="close"
+        class="popup__close popup__close-profile"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
 
-                <form name="safe"
-                  method="post"
-                  class="popup__form popup__form-profile">
-                    <input type="text"
-                      class="popup__input-container popup__input-container_ctrl_fullname"
-                      name="fullname"
-                      placeholder="Как вас зовут" required>
-                    <input type="text"
-                      class="popup__input-container popup__input-container_ctrl_job"
-                      name="job"
-                      placeholder="О себе" required>
-                    <button type="submit"
-                      class="popup__safe">Сохранить</button>
-                </form>
-            </div>
-        </section>
+        <form class="popup__form popup__form-profile" novalidate>
+            <input type="text" id="name-profile" class="popup__input popup__input_ctrl_fullname"
+                   name="fullname" value="Как вас зовут" required minlength="2" maxlength="40">
+            <span class="popup__input-error" id="name-profile-error"></span>
+            <input type="text" id="about-profile" class="popup__input popup__input_ctrl_job"
+                   name="job" value="О себе" required minlength="2" maxlength="200">
+            <span class="popup__input-error" id="about-profile-error"></span>
+            <button type="submit" class="popup__safe">
+                <span>Сохранить</span>
+            </button>
+        </form>
+    </div>
+</section>
 
-        <section class="popup" data-popup-name="popup-card">
-            <div class="popup__container popup__container-card">
-                <button aria-label="close"
-                 type="button" id="close-card"
-                 class="popup__close popup__close-card">
-              </button>
-                <h3 class="popup__title-new">Новое место</h3>
+<section class="popup" data-popup-name="popup-card">
+    <div class="popup__container">
+        <button aria-label="close" type="button" id="close-card"
+                class="popup__close popup__close-card"></button>
+        <h3 class="popup__title-new">Новое место</h3>
 
-                <form name="safe"
-                method="post"
-                class="popup__form popup__form-card">
-                    <input type="text"
-                      class="popup__input-container popup__input-container_ctrl_name"
-                      name="name"
-                      placeholder="Название" required>
-                    <input type="url"
-                      class="popup__input-container popup__input-container_ctrl_link"
-                      name="link"
-                      placeholder="Ссылка на картинку" required>
-                    <button type="submit"
-                     class="popup__create">Создать</button>
-                </form>
-            </div>
-        </section>
+        <form class="popup__form popup__form-card" novalidate>
+            <input type="text" value="" id="name-card" class="popup__input popup__input_ctrl_name"
+                   name="name" placeholder="Название" required minlength="2" maxlength="30">
+            <span class="popup__input-error" id="name-card-error"></span>
+            <input type="url" id="link-card" class="popup__input popup__input_ctrl_link"
+                   name="link" placeholder="Ссылка на картинку" required>
+            <span class="popup__input-error" id="link-card-error"></span>
+            <button type="submit" class="popup__safe popup__create">
+                <span class="popup__create">Создать</span>
+            </button>
+        </form>
+    </div>
+</section>
 
-        <section class="popup" data-popup-name="popup-image">
-             <div class="popup__container popup__container-image">
-                <figure class="popup__image">
-                <img src="#" class="popup__item-img" alt="#">
-                <figcaption class="popup__caption"></figcaption>
-                </figure>
-            <button aria-label="close"
-            type="button" id="close-image"
-            class="popup__close popup__close-image">
-          </button>
-            </div>
-        </section>
+<section class="popup" data-popup-name="popup-image">
+    <div class="popup__container popup__container-image">
+        <figure class="popup__image">
+            <img src="#" class="popup__item-img" alt="#">
+            <figcaption class="popup__caption"></figcaption>
+        </figure>
+        <button aria-label="close" type="button" id="close-image"
+                class="popup__close popup__close-image"></button>
+    </div>
+</section>
 
-        <!-- Секция script -->
+
+            <!-- Секция script -->
 
         <script src="./scripts/index.js"></script>
+        <script src="./scripts/validate.js"></script>
     </body>
 </html>
+
+
+             <!-- input.id + "-error"-->

@@ -4,8 +4,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  margin: 48px auto 37px;
-  padding: 0;
   display: block;
   color: white;
   background-color: black;
@@ -16,6 +14,13 @@
 
 .popup__safe:hover {
   background-color: rgba(0, 0, 0, .8);
+}
+
+.popup__safe:nth-child(n) {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
 }
 
  @media screen and (max-width: 767px) {
