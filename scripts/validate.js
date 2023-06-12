@@ -30,7 +30,7 @@ function checkInputValidity(formElement, inputElement, inputErrorClass, errorCla
 }
 
 // Функция проверки валидности всех инпутов
-const inputList = document.querySelectorAll(".popup__input");
+//const inputList = document.querySelectorAll(".popup__input"); - пусть пока так останется
 function hasInvalidInput(inputList) {
     return inputList.some((inputElement) => {
         return !inputElement.validity.valid;
@@ -66,6 +66,7 @@ function setEventListeners(formElement, { inputSelector, submitButtonSelector, i
     });
 }
 
+/*
 // все настройки передаются при вызове
 enableValidation({
     formSelector: ".popup__form",
@@ -75,6 +76,17 @@ enableValidation({
     inputErrorClass: "popup__input_error",
     errorClass: "popup__input-error_active",
 });
+*/
+
+const validationConfig = {
+  formSelector: ".popup__form",
+    inputSelector: ".popup__input",
+    submitButtonSelector: ".popup__safe",
+    inactiveButtonClass: "popup__safe_disabled",
+    inputErrorClass: "popup__input_error",
+    errorClass: "popup__input-error_active",
+};
+enableValidation(validationConfig);
 
 // Функция применения валидации
 function enableValidation({ formSelector, ...rest }) {

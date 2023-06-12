@@ -1,30 +1,3 @@
-const initialCards = [
-    {
-        name: "Оранжевый амфиприон",
-        link: "https://c.pxhere.com/photos/46/8b/anemone_fish_clown_fish_aquarium_amphiprion_fish_water_creature_swim_exotic-594057.jpg!d",
-    },
-    {
-        name: "Аквариум",
-        link: "https://c.pxhere.com/photos/f8/0d/fish_aquarium_sea_fish_tank_coral_reef_reef-981484.jpg!d",
-    },
-    {
-        name: "Бычковая мандаринка",
-        link: "https://c.pxhere.com/photos/42/c7/mandarin_cay_fish_sea_animal_under_water_aquarium_water-833712.jpg!d",
-    },
-    {
-        name: "Тигровая акула",
-        link: "https://c.pxhere.com/photos/eb/5f/shark_water_fish_blue_swimming-931716.jpg!d",
-    },
-    {
-        name: "Монако",
-        link: "https://c.pxhere.com/photos/72/ad/monaco_port_principality_of_monaco_yachts_boats_homes_skyscrapers_pushed-715101.jpg!d",
-    },
-    {
-        name: "Морской пейзаж",
-        link: "https://c.pxhere.com/photos/c8/43/bay_beach_seascape_paradise_nature_island_water_tropical-913469.jpg!d",
-    },
-];
-
 const listCard = document.querySelector(".element__list");
 const nameTitleProfile = document.querySelector(".profile__title");
 const JobProfile = document.querySelector(".profile__subtitle");
@@ -34,7 +7,6 @@ const popupOpenFullImage = document.querySelector("[data-popup-name=popup-image]
 const ImagePopupFullImage = document.querySelector(".popup__item-img");
 const captionPopupFullImage = document.querySelector(".popup__caption");
 const popupСontainer = document.querySelector(".popup__container");
-const buttonPopupOpenProfile = document.querySelector(".profile__square");
 const buttonPopupCloseList = document.querySelectorAll(".popup__close");
 const buttonCreateCardSubmit = document.querySelector(".popup__create[type='submit']");
 const inputFullNameProfile = document.querySelector(".popup__input_ctrl_fullname");
@@ -44,6 +16,17 @@ const inputNameFormAddNewCard = document.querySelector(".popup__input_ctrl_name"
 const formNewAddCardSubmit = document.querySelector(".popup__form-card");
 const formProfileSubmit = document.querySelector(".popup__form");
 
+
+// Закрытие popup кнопкой Esc
+function closeEsc(event) {
+    // Если ключ кнопки равен Esc, то
+    if (event.key === "Escape") {
+      const popup = document.querySelector(".popup_opened");
+      if (popup) {
+         closePopup(popup); // закрываем
+      }
+    }
+}
 
 //Функция открытия модального окна
 function openPopup(popupElement) {
@@ -55,16 +38,6 @@ function openPopup(popupElement) {
 function closePopup(popupElement) {
     popupElement.classList.remove("popup_opened");
     document.removeEventListener("keydown", closeEsc);
-}
-
-// Закрытие popup кнопкой Esc
-function closeEsc(event) {
-    const popup = document.querySelector(".popup_opened");
-    // Если ключ кнопки равен Esc, то
-    if (event.key === "Escape" && popup) {
-        // удаляем класс у popup
-        closePopup(popup);
-    }
 }
 
 // Получаем все оверлеи popup
@@ -109,9 +82,10 @@ buttonPopupCloseList.forEach((closeButtonElement) => {
 const cardTemplate = document.querySelector("#card-template").content;
 function createCard(link, name) {
     const elementCard = cardTemplate.querySelector(".card").cloneNode(true);
+    const elementToCard = elementCard.querySelector(".card__item-img");
     elementCard.querySelector(".card__title").textContent = name;
-    elementCard.querySelector(".card__item-img").src = link;
-    elementCard.querySelector(".card__item-img").alt = name;
+    elementToCard.src = link;
+    elementToCard.alt = name;
 
     //Функция кнопка удалить
     elementCard.querySelector(".card__basket").addEventListener("click", () => {
@@ -131,7 +105,7 @@ function createCard(link, name) {
         ImagePopupFullImage.src = link;
         ImagePopupFullImage.alt = name;
     });
-    return elementCard;
+    return elementToCard, elementCard;
 }
 
 //Функция массива с карточками
@@ -142,17 +116,27 @@ function addCardToPage() {
 }
 addCardToPage();
 
+/*
+//import { initialCards } from "./constants.js";
+ // Перебираем массив с карточками
+initialCards.forEach( (item) => {
+  listCard.append(createCard(item.link, item.name));     // Используем функцию создания карточки с аргументами имени и ссылки из массива карточек
+});
+*/
+
 //Функция добавления карточек
 function handleFormSubmitAddCard(inputLinkFormAddNewCard, inputNameFormAddNewCard) {
     listCard.prepend(createCard(inputLinkFormAddNewCard.value, inputNameFormAddNewCard.value));
 }
 
 // Popup
+const buttonPopupOpenProfile = document.querySelector(".profile__square");
 document.querySelector(".profile__square").addEventListener("click", () => {
     openPopup(popupOpenProfile);
 });
 
 //Popup Новое место
+const buttonPopupOpenAddCard = document.querySelector(".profile__rectangle");
 document.querySelector(".profile__rectangle").addEventListener("click", () => {
     openPopup(popupOpenAddNewCard);
 });
