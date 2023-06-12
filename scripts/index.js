@@ -131,6 +131,9 @@ document.querySelector(".profile__square").addEventListener("click", () => {
 const buttonPopupOpenAddCard = document.querySelector(".profile__rectangle");
 document.querySelector(".profile__rectangle").addEventListener("click", () => {
     openPopup(popupOpenAddNewCard);
+    // Кнопка disabled при открытии popup для добавления карточек
+    buttonCreateCardSubmit.setAttribute("disabled", true);
+    buttonCreateCardSubmit.classList.add("popup__safe_disabled");
 });
 
 // Обработчик формы
