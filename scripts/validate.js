@@ -21,7 +21,7 @@ function hideInputError(formElement, inputElement, inputErrorClass, errorClass) 
 // Функция проверки валидности инпута
 function checkInputValidity(formElement, inputElement, inputErrorClass, errorClass) {
     if (!inputElement.validity.valid) {
-        // Условие: если инпут НЕ валиден, то вызываем функцию показа ошибки с аргументами формы, инпута и сообщения ошибки инпута
+        // Условие: если инпут не валиден, то вызываем функцию показа ошибки с аргументами формы, инпута и сообщения ошибки инпута
         showInputError(formElement, inputElement, inputElement.validationMessage, inputErrorClass, errorClass);
     } else {
         // иначе, вызываем функцию скрытия ошибки с аргументами формы и инпута
@@ -37,7 +37,7 @@ function hasInvalidInput(inputList) {
     });
 }
 
-// Функция добавления/удаления класса кнопки
+// Функция класса кнопки добавления/удаления
 function toggleButtonState(inputList, buttonElement, inactiveButtonClass) {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(inactiveButtonClass);
@@ -66,7 +66,6 @@ function setEventListeners(formElement, { inputSelector, submitButtonSelector, i
     });
 }
 
-/*
 // все настройки передаются при вызове
 enableValidation({
     formSelector: ".popup__form",
@@ -76,8 +75,8 @@ enableValidation({
     inputErrorClass: "popup__input_error",
     errorClass: "popup__input-error_active",
 });
-*/
 
+// все настройки enableValidation сохраняем в переменной
 const validationConfig = {
   formSelector: ".popup__form",
     inputSelector: ".popup__input",

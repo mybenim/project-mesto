@@ -116,14 +116,6 @@ function addCardToPage() {
 }
 addCardToPage();
 
-/*
-//import { initialCards } from "./constants.js";
- // Перебираем массив с карточками
-initialCards.forEach( (item) => {
-  listCard.append(createCard(item.link, item.name));     // Используем функцию создания карточки с аргументами имени и ссылки из массива карточек
-});
-*/
-
 //Функция добавления карточек
 function handleFormSubmitAddCard(inputLinkFormAddNewCard, inputNameFormAddNewCard) {
     listCard.prepend(createCard(inputLinkFormAddNewCard.value, inputNameFormAddNewCard.value));
