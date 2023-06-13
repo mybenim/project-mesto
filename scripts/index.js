@@ -7,6 +7,8 @@ const popupOpenFullImage = document.querySelector("[data-popup-name=popup-image]
 const ImagePopupFullImage = document.querySelector(".popup__item-img");
 const captionPopupFullImage = document.querySelector(".popup__caption");
 const popupСontainer = document.querySelector(".popup__container");
+const buttonPopupOpenProfile = document.querySelector(".profile__square");
+const buttonPopupOpenAddCard = document.querySelector(".profile__rectangle");
 const buttonPopupCloseList = document.querySelectorAll(".popup__close");
 const buttonCreateCardSubmit = document.querySelector(".popup__create[type='submit']");
 const inputFullNameProfile = document.querySelector(".popup__input_ctrl_fullname");
@@ -122,18 +124,13 @@ function handleFormSubmitAddCard(inputLinkFormAddNewCard, inputNameFormAddNewCar
 }
 
 // Popup
-const buttonPopupOpenProfile = document.querySelector(".profile__square");
-document.querySelector(".profile__square").addEventListener("click", () => {
+buttonPopupOpenProfile.addEventListener("click", () => {
     openPopup(popupOpenProfile);
 });
 
 //Popup Новое место
-const buttonPopupOpenAddCard = document.querySelector(".profile__rectangle");
-document.querySelector(".profile__rectangle").addEventListener("click", () => {
+buttonPopupOpenAddCard.addEventListener("click", () => {
     openPopup(popupOpenAddNewCard);
-    // Кнопка disabled при открытии popup для добавления карточек
-    buttonCreateCardSubmit.setAttribute("disabled", true);
-    buttonCreateCardSubmit.classList.add("popup__safe_disabled");
 });
 
 // Обработчик формы
