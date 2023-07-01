@@ -24,7 +24,7 @@
                         <img src="./images/image.jpg"
                          class="profile__image"
                          alt="Жак-Ив Кусто">
-                        <div class="profile__box">
+                         <div class="profile__box">
                             <h1 class="profile__title">Жак-Ив Кусто</h1>
                             <button aria-label="Редактировать"
                             class="profile__square"
@@ -47,13 +47,11 @@
 
             <template id="card-template">
                 <article class="card">
-                    <button class="card__basket">
-                    </button>
+                    <button class="card__basket"></button>
                     <img src="#" class="card__item-img" alt="#">
                     <div class="card__group">
                         <h2 class="card__title"></h2>
-                        <button class="card__like-icon">
-                        </button>
+                        <button class="card__like-icon"></button>
                     </div>
                 </article>
             </template>
@@ -80,7 +78,8 @@
             <input type="text" id="about-profile" class="popup__input popup__input_ctrl_job"
                    name="job" value="О себе" required minlength="2" maxlength="200">
             <span class="popup__input-error" id="about-profile-error"></span>
-            <button type="submit" class="popup__safe">
+            <button type="submit"
+            class="popup__safe popup__safe_disabled" disabled="true">
                 <span>Сохранить</span>
             </button>
         </form>
@@ -100,7 +99,8 @@
             <input type="url" id="link-card" class="popup__input popup__input_ctrl_link"
                    name="link" placeholder="Ссылка на картинку" required>
             <span class="popup__input-error" id="link-card-error"></span>
-            <button type="submit" id="create-card" class="popup__safe popup__create">
+            <button type="submit" id="create-card"
+            class="popup__safe popup__create popup__safe_disabled" disabled="true">
                 <span class="popup__create">Создать</span>
             </button>
         </form>
@@ -118,12 +118,9 @@
     </div>
 </section>
 
-
             <!-- Секция script -->
 
-        <script src="./scripts/constants.js"></script>
-        <script src="./scripts/validate.js"></script>
-        <script src="./scripts/index.js"></script>
+        <script type="module" src="./scripts/index.js"></script>
 
     </body>
 </html>
