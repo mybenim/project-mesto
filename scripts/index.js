@@ -84,8 +84,9 @@ function closePopup(popupElement) {
 // Popup Profile
 buttonPopupOpenProfile.addEventListener("click", () => {
     openPopup(popupOpenProfile);
-    formNewAddCardSubmit.reset();
     formProfileElement.resetErrorOpenForm();
+    inputFullNameProfile.value = nameTitleProfile.textContent;
+    inputjobProfile.value = JobProfile.textContent;
 });
 
 // Popup Новое место
@@ -166,5 +167,6 @@ formNewAddCardSubmit.addEventListener("submit", (event) => {
     event.preventDefault();
     const cardDataNameUrl = { name: inputNameFormAddNewCard.value, link: inputLinkFormAddNewCard.value };
     addCard(listCard, createNewCard(cardDataNameUrl));
+    //formNewAddCardSubmit.reset();
     closePopup(popupOpenAddNewCard);
 });
