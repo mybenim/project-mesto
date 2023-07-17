@@ -1,4 +1,3 @@
-
 // Карточки
 const initialCards = [
     {
@@ -35,6 +34,8 @@ const profilePopupSelector = "[data-popup-name=popup-profile]";
 const addCardPopupSelector = "[data-popup-name=popup-card]";
 const popupImageSelector = "[data-popup-name=popup-image]";
 const listsElementSelector = ".element__list";
+const profileFormDataName = "form_profile";
+const cardFormDataName = "form_card";
 
 const configInfo = {
   name: ".profile__title",
@@ -63,5 +64,7 @@ export {
   listsElementSelector,
   configInfo,
   formsValidator,
-  validationConfig
+  validationConfig,
+  profileFormDataName,
+  cardFormDataName
 };

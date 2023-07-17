@@ -1,7 +1,7 @@
 export default class Popup {
     constructor(popupSelector) {
         this._popup = document.querySelector(popupSelector);
-        this._buttonPopupCloseList = this._popup.querySelector(".popup__close");
+        this._buttonPopupClose = this._popup.querySelector(".popup__close");
     }
 
     // обработчик Esc
@@ -29,12 +29,12 @@ export default class Popup {
 
     // слушатель клика по кнопке Close and Overlay
     setEventListeners() {
-        this._buttonPopupCloseList.addEventListener("click", this._handleCloseButton);
-        this._popup.addEventListener("click", this._handlePopupList);
+        this._buttonPopupClose.addEventListener("click", this._handleCloseButton);
+        this._popup.addEventListener("click", this._handlePopup);
     }
 
     // обработчик закрытия по Overlay
-    _handlePopupList = (event) => {
+    _handlePopup = (event) => {
         if (event.target.classList.contains("popup")) {
             this.close();
         }
