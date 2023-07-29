@@ -1,7 +1,5 @@
-import Popup from "./Popup.js";
-
-// информация от родителя
-export default class PopupWithForm extends Popup {
+import PopupWithSubmitBtn from "./PopupWithSubmitBtn.js";
+export default class PopupWithForm extends PopupWithSubmitBtn {
     constructor(popupSelector, submitFunction) {
         super(popupSelector);
         this._submitFunction = submitFunction;
@@ -25,7 +23,13 @@ export default class PopupWithForm extends Popup {
 
     setEventListeners() {
         super.setEventListeners(); // от родителя
-        this._form.addEventListener("submit", this._submitFunction);
+
+      this._form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        this._submitFunction(this.getInputsValue());
+      });
+
     }
 
     close() {

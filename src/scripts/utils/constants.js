@@ -33,13 +33,17 @@ const selectorTemplate = "#card-template";
 const profilePopupSelector = "[data-popup-name=popup-profile]";
 const addCardPopupSelector = "[data-popup-name=popup-card]";
 const popupImageSelector = "[data-popup-name=popup-image]";
+const popupAvatarSelector = "[data-popup-name=popup-avatar]";
+const popupDeleteCardSelector = "[data-popup-name=popup-delete]";
 const listsElementSelector = ".element__list";
 const profileFormDataName = "form_profile";
 const cardFormDataName = "form_card";
+const profileAvatarFormDataName = "form_avatar";
 
 const configInfo = {
   name: ".profile__title",
-  job: ".profile__subtitle"
+  job: ".profile__subtitle",
+  profileAvatar: ".profile__avatar"
 }
 
 const formsValidator = {};
@@ -61,10 +65,13 @@ export {
   profilePopupSelector,
   addCardPopupSelector,
   popupImageSelector,
+  popupAvatarSelector,
+  popupDeleteCardSelector,
   listsElementSelector,
   configInfo,
   formsValidator,
   validationConfig,
   profileFormDataName,
-  cardFormDataName
+  cardFormDataName,
+  profileAvatarFormDataName
 };

@@ -7,122 +7,250 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <!-- <link rel="stylesheet" href="./pages/index.css"> -->
     </head>
-    <body class="page">
-        <div class="page__content">
+<body class="page">
+  <div class="page__content">
 
-            <!-- Секция header -->
+<!-- Секция header -->
 
-            <header class="header page__header">
-                <img src="<%=require('./images/logo.svg')%>" class="header__logo" alt="логотип">
-            </header>
+<header class="header page__header">
+  <img src="<%=require('./images/logo.svg')%>"
+  class="header__logo"
+  alt="логотип">
+</header>
 
-            <!-- Секция profile -->
+<!-- Секция profile -->
 
-            <main class="main">
-                <section class="profile page__profile">
-                    <div class="profile__info">
-                        <img src="<%=require('./images/image.jpg')%>"
-                         class="profile__image"
-                         alt="Жак-Ив Кусто">
-                         <div class="profile__box">
-                            <h1 class="profile__title">Жак-Ив Кусто</h1>
-                            <button aria-label="Редактировать"
-                            class="profile__square"
-                            type="button"></button>
-                            <p class="profile__subtitle">Исследователь океана, учёный, изобретатель</p>
-                        </div>
-                        <button aria-label="плюс"
-                        class="profile__rectangle"
-                        type="button"></button>
-                    </div>
-                </section>
-
-            <!-- Секция еlement -->
-
-                <section class="element page__element">
-                    <ul class="element__list">
-                    </ul>
-                </section>
-            </main>
-
-            <template id="card-template">
-                <article class="card">
-                    <button class="card__basket"></button>
-                    <img src="#" class="card__item-img" alt="#">
-                    <div class="card__group">
-                        <h2 class="card__title"></h2>
-                        <button class="card__like-icon"></button>
-                    </div>
-                </article>
-            </template>
-
-            <!-- Секция footer -->
-
-            <footer class="footer page__footer">
-                <p class="footer__info">&copy; 2023. France, Monaco, Spain</p>
-            </footer>
+<main class="main">
+  <section class="profile page__profile">
+    <div class="profile__info">
+      <button
+        type="button"
+        class="profile__image">
+          <img src="#"
+          class="profile__avatar"
+          alt="Ваше фото"
+          name="avatar">
+      </button>
+        <div class="profile__box">
+          <h1 class="profile__title"></h1>
+      <button aria-label="Редактировать"
+        class="profile__square"
+        type="button">
+      </button>
+        <p class="profile__subtitle"></p>
         </div>
+      <button
+      aria-label="плюс"
+      class="profile__rectangle"
+      type="button"></button>
+  </div>
+</section>
 
-            <!-- Секция popup -->
+<!-- Секция еlement -->
 
-  <section class="popup" data-popup-name="popup-profile">
-    <div class="popup__container">
-        <button aria-label="close" type="button" id="close"
-        class="popup__close popup__close-profile"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
+<section class="element page__element">
+  <ul class="element__list">
+  </ul>
+</section>
+ </main>
 
-        <form class="popup__form popup__form-profile" data-name="form_profile" novalidate>
-            <input type="text" id="name-profile" class="popup__input popup__input_ctrl_fullname"
-                   name="fullname" placeholder="Как вас зовут" required minlength="2" maxlength="40">
-            <span class="popup__input-error" id="name-profile-error"></span>
-            <input type="text" id="about-profile" class="popup__input popup__input_ctrl_job"
-                   name="job" placeholder="О себе" required minlength="2" maxlength="200">
-            <span class="popup__input-error" id="about-profile-error"></span>
-            <button type="submit"
-            class="popup__safe popup__safe_disabled" disabled="true">
-                <span>Сохранить</span>
-            </button>
+<template id="card-template">
+  <article class="card">
+    <button class="card__basket"></button>
+      <img src="#" class="card__item-img" alt="#">
+        <div class="card__group">
+          <h2 class="card__title"></h2>
+            <div class="card__like">
+              <button class="card__like-icon"></button>
+                <p class="card__like-counter"></p>
+            </div>
+        </div>
+  </article>
+</template>
+
+<!-- Секция footer -->
+
+<footer class="footer page__footer">
+  <p class="footer__info">&copy; 2023. France, Monaco, Spain</p>
+</footer>
+</div>
+
+<!-- Секция popup -->
+
+<section class="popup" data-popup-name="popup-profile">
+  <div class="popup__container">
+    <button
+    id="close"
+    class="popup__close popup__close-profile"
+    aria-label="close"
+    type="button"
+    ></button>
+      <h3 class="popup__title">Редактировать профиль</h3>
+        <form
+        class="popup__form popup__form-profile"
+        data-name="form_profile" novalidate>
+          <input
+          type="text"
+          id="name-profile"
+          class="popup__input popup__input_ctrl_fullname"
+          name="fullname"
+          placeholder="Как вас зовут"
+          required minlength="2" maxlength="40">
+            <span
+            id="name-profile-error"
+            class="popup__input-error"
+            ></span>
+          <input
+          id="about-profile"
+          class="popup__input popup__input_ctrl_job"
+          type="text"
+          name="job"
+          placeholder="О себе"
+          required minlength="2" maxlength="200">
+            <span
+            class="popup__input-error"
+            id="about-profile-error"
+            ></span>
+    <button
+    type="submit"
+    class="popup__safe popup__safe_disabled"
+    disabled="true">
+      <span>Сохранить</span>
+    </button>
         </form>
-    </div>
+  </div>
 </section>
 
 <section class="popup" data-popup-name="popup-card">
     <div class="popup__container">
-        <button aria-label="close" type="button" id="close-card"
-                class="popup__close popup__close-card"></button>
-        <h3 class="popup__title-new">Новое место</h3>
-
-        <form id="create-card-form" class="popup__form popup__form-card" data-name="form_card" novalidate>
-            <input type="text" value="" id="name-card" class="popup__input popup__input_ctrl_name"
-                   name="name" placeholder="Название" required minlength="2" maxlength="30">
-            <span class="popup__input-error" id="name-card-error"></span>
-            <input type="url" id="link-card" class="popup__input popup__input_ctrl_link"
-                   name="link" placeholder="Ссылка на картинку" required>
-            <span class="popup__input-error" id="link-card-error"></span>
-            <button type="submit" id="create-card"
-            class="popup__safe popup__create popup__safe_disabled" disabled="true">
-                <span class="popup__create">Создать</span>
+        <button
+        id="close-card"
+        class="popup__close popup__close-card"
+        aria-label="close"
+        type="button"
+        ></button>
+          <h3 class="popup__title">Новое место</h3>
+        <form
+        id="create-card-form"
+        class="popup__form popup__form-card"
+        data-name="form_card" novalidate>
+          <input
+          type="text"
+          value=""
+          id="name-card"
+          class="popup__input popup__input_ctrl_name"
+          name="name"
+          placeholder="Название" required minlength="2" maxlength="30">
+              <span
+              class="popup__input-error"
+              id="name-card-error"></span>
+          <input
+          type="url"
+          id="link-card"
+          class="popup__input popup__input_ctrl_link"
+          name="link"
+          placeholder="Ссылка на картинку"
+          required>
+            <span
+            class="popup__input-error"
+            id="link-card-error"></span>
+        <button
+        type="submit"
+        id="create-card"
+        class="popup__safe popup__create popup__safe_disabled"
+        disabled="true">
+            <span
+            class="popup__create">Создать</span>
             </button>
         </form>
     </div>
 </section>
 
 <section class="popup" data-popup-name="popup-image">
-    <div class="popup__container popup__container-image">
-        <figure class="popup__image">
-            <img src="#" class="popup__item-img" alt="#">
-            <figcaption class="popup__caption"></figcaption>
-        </figure>
-        <button aria-label="close" type="button" id="close-image"
-                class="popup__close popup__close-image"></button>
+  <div class="popup__container popup__container-image">
+    <figure class="popup__image">
+      <img src="#" class="popup__item-img" alt="#">
+
+      <figcaption class="popup__caption"></figcaption>
+    </figure>
+
+    <button
+      id="close-image"
+      class="popup__close popup__close-image"
+      type="button"
+      aria-label="close"
+    ></button>
+  </div>
+</section>
+
+<section class="popup" data-popup-name="popup-avatar">
+  <div class="popup__container popup__container-avatar">
+    <button
+      aria-label="close"
+      type="button"
+      id="close-card"
+      class="popup__close popup__close-card"
+    ></button>
+      <h3 class="popup__title">Обновить фото</h3>
+        <form
+        id="form-create-avatar"
+        class="popup__form popup__form-avatar"
+        data-name="form_avatar" novalidate>
+            <input
+            type="url"
+            id="avatar"
+            class="popup__input popup__input_ctrl_link"
+            name="avatar"
+            placeholder="Ссылка на фото"
+            required>
+              <span
+              class="popup__input-error"
+              id="avatar-error"
+              ></span>
+    <button
+      type="submit"
+      id="create-card"
+      class="popup__safe popup__create">
+      <span class="popup__create">Сохранить</span>
+    </button>
+        </form>
     </div>
 </section>
+
+<section class="popup" data-popup-name="popup-delete">
+    <div class="popup__container popup__container-delete">
+        <button
+        aria-label="close"
+        type="button"
+        id="close-card"
+        class="popup__close popup__close-card"></button>
+          <h3 class="popup__title">Вы уверены?</h3>
+            <form
+            id="form-delete-card"
+            class="popup__form popup__form-delete"
+            data-name="form_delete-card" novalidate>
+    <button
+      id="create-card"
+      class="popup__safe popup__create>
+      type="submit"
+        <span class="popup__create">Да</span>
+    </button>
+      </form>
+    </div>
+</section>
+                 <!-- popup__safe_disabled" disabled="true" -->
 
             <!-- Секция script
 
         <script type="module" src="./index.js"></script>-->
 
+
+
     </body>
 </html>
 
              <!-- input.id + "-error"-->
+
+
+             <!-- Токен: e164ebe0-cf4e-493a-bf1c-60f1f87f2b77
+             Идентификатор группы: cohort-71" -->
