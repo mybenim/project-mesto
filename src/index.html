@@ -186,7 +186,7 @@
 <section class="popup" data-popup-name="popup-avatar">
   <div class="popup__container popup__container-avatar">
     <button
-      id="close-card"
+      id="closeCard"
       class="popup__close popup__close-card"
       aria-label="close"
       type="button"></button>
@@ -208,7 +208,7 @@
               ></span>
     <button
       type="submit"
-      id="create-card"
+      id="createCard"
       class="popup__safe popup__create">
       <span class="popup__create">Сохранить</span>
     </button>
@@ -219,19 +219,16 @@
 <section class="popup" data-popup-name="popup-delete">
     <div class="popup__container popup__container-delete">
         <button
-        aria-label="close"
-        type="button"
-        id="close-card"
-        class="popup__close popup__close-card"></button>
-          <h3 class="popup__title">Вы уверены?</h3>
-            <form
-            id="form-delete-card"
-            class="popup__form popup__form-delete"
-            data-name="form_delete-card" novalidate>
-    <button
-      id="create-card"
-      class="popup__safe popup__create>
-      type="submit">
+          aria-label="close"
+          type="button"
+          id="closeCardDelete"
+          class="popup__close popup__close-card"></button>
+            <h3 class="popup__title">Вы уверены?</h3>
+              <form
+              id="form-delete-card"
+              class="popup__form popup__form-delete"
+              data-name="form_delete-card" novalidate>
+    <button id="create-card" class="popup__safe popup__create type="submit">
         <span class="popup__create">Да</span>
     </button>
       </form>
