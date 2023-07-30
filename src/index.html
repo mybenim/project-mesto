@@ -13,8 +13,7 @@
 <!-- Секция header -->
 
 <header class="header page__header">
-  <img src="<%=require('./images/logo.svg')%>"
-  class="header__logo"
+  <img src="<%=require('./images/logo.svg')%>" class="header__logo"
   alt="логотип">
 </header>
 
@@ -111,10 +110,7 @@
             class="popup__input-error"
             id="about-profile-error"
             ></span>
-    <button
-    type="submit"
-    class="popup__safe popup__safe_disabled"
-    disabled="true">
+    <button type="submit" class="popup__safe popup__safe_disabled" disabled="true">
       <span>Сохранить</span>
     </button>
         </form>
@@ -154,14 +150,10 @@
             <span
             class="popup__input-error"
             id="link-card-error"></span>
-        <button
-        type="submit"
-        id="create-card"
-        class="popup__safe popup__create popup__safe_disabled"
-        disabled="true">
-            <span
-            class="popup__create">Создать</span>
-            </button>
+        <button id="create-card" type="submit"
+        class="popup__safe popup__create popup__safe_disabled" disabled="true">
+          <span class="popup__create">Создать</span>
+          </button>
         </form>
     </div>
 </section>
@@ -228,9 +220,8 @@
               id="form-delete-card"
               class="popup__form popup__form-delete"
               data-name="form_delete-card" novalidate>
-    <button id="create-card" class="popup__safe popup__create type="submit">
-        <span class="popup__create">Да</span>
-    </button>
+    <button id="createCardDelete" class="popup__safe popup__create" type="submit">
+        <span class="popup__create">Да</span></button>
       </form>
     </div>
 </section>
