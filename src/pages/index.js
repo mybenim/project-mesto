@@ -44,9 +44,8 @@ const section = new Section({
 
 // Экземпляр форм Popup
 const popupImage = new PopupWithImage(popupImageSelector);
+
 const popupDeleteCard = new PopupDeleteCard(popupDeleteCardSelector, ({ element, cardId }) => {
-  console.log('popupDeleteCard element', element)
-  console.log('popupDeleteCard cardId', cardId)
 
     popupDeleteCard.toggleSubmitBtnText("Удаление...")
 
@@ -60,44 +59,38 @@ const popupDeleteCard = new PopupDeleteCard(popupDeleteCardSelector, ({ element,
           popupDeleteCard.toggleSubmitBtnText("Да")
           console.error(`ошибка при удалении карточки ${error}`)
         })
+        .finally(() => popupDeleteCard.toggleSubmitBtnText("Да"))
 })
 
 const popupProfile = new PopupWithForm(profilePopupSelector, ({ fullname, job }) => {
   popupProfile.toggleSubmitBtnText("Сохранение...")
-
   api.setUserInfo({ fullname, job })
     .then(res => {
-      popupProfile.toggleSubmitBtnText("Сохранить")
-      userInfo.setUserInfo({fullname: res.name, job: res.about, avatar: res.avatar})
+        popupProfile.toggleSubmitBtnText("Сохранить")
+        userInfo.setUserInfo({fullname: res.name, job: res.about, avatar: res.avatar})
+        popupProfile.close()
     })
-    .catch((error) => {
-      popupProfile.toggleSubmitBtnText("Сохранить")
-      console.error(`ошибка при редактировании профиля ${error}`)
-    })
-    .finally()
-
-  //userInfo.setUserInfo(popupProfile.getInputsValue());
-  popupProfile.close();
+    .catch((error) => console.error(`ошибка при редактировании профиля ${error}`))
+    .finally(() => popupProfile.toggleSubmitBtnText("Сохранить"))
 });
 
 // Форма добавления карточки
 const popupAddCard = new PopupWithForm(addCardPopupSelector, (data) => {
-    // Promise.all([api.getUserInfo(), api.addNewCard()])
-  popupAddCard.toggleSubmitBtnText("Создание...")
+    popupAddCard.toggleSubmitBtnText("Создание...");
     api.addNewCard(data)
         .then((card) => {
-          popupAddCard.toggleSubmitBtnText("Создать")
-          card.myId = myId
+            popupAddCard.toggleSubmitBtnText("Создать");
+            card.myId = myId;
             section.addItemPrepend(newCard(card));
-            popupAddCard.close();
         })
-        //section.addItem(newCard(data))
         .catch((error) => {
-          popupAddCard.toggleSubmitBtnText("Создать")
-          console.error(`ошибка при создании новой карточки ${error}`)
+            popupAddCard.toggleSubmitBtnText("Создать");
+            console.error(`ошибка при создании новой карточки ${error}`);
         })
-        .finally();
+        .finally(() => popupAddCard.toggleSubmitBtnText("Создать"));
+    popupAddCard.close();
 });
+
 
 // Форма Avatar
 const popupAvatar = new PopupWithForm(popupAvatarSelector, (data) => {
@@ -108,13 +101,9 @@ const popupAvatar = new PopupWithForm(popupAvatarSelector, (data) => {
             console.log(res);
             userInfo.setUserInfo({ fullname: res.name, job: res.about, avatar: res.avatar });
         })
-        .catch((error) => {
-          popupAvatar.toggleSubmitBtnText("Сохранить")
-          console.error(`ошибка при обновлении avatar ${error}`)
-        });
-    //document.querySelector(".profile__avatar").src = data.avatar;
-    popupAvatar.close();
-});
+        .catch((error) => console.error(`ошибка при обновлении avatar ${error}`))
+        .finally(() => popupAvatar.toggleSubmitBtnText("Сохранить"))
+    });
 
 popupImage.setEventListeners();
 popupProfile.setEventListeners();
@@ -140,7 +129,6 @@ function newCard(element) {
     const card = new Card(element, selectorTemplate, popupImage.open, popupDeleteCard.open, (likeElement, cardId) => {
       console.log('likeElement', likeElement.classList)
 
-      // if (likeElement.classList.contains(".card__button-like")) { //ошибка. В списке классов нет .
       if (likeElement.classList.contains("card__button-like")) {
             api.deleteLike(cardId)
                 .then((res) => {
@@ -170,17 +158,16 @@ Array.from(document.forms).forEach(item => {
 
 // Обработчик клика кнопки avatar
 document.querySelector(".profile__image").addEventListener("click", () => {
-  popupAvatar.open();
-  formsValidator[profileAvatarFormDataName].resetForm()
- });
+    popupAvatar.open();
+    formsValidator[profileAvatarFormDataName].resetForm();
+});
 
 // Массив Promise асинхронных методов
 Promise.all([api.getUserInfo(), api.getInitialCards()])
     .then(([getUserInfo, initialCards]) => {
-      myId = getUserInfo._id
+        myId = getUserInfo._id;
         userInfo.setUserInfo({ fullname: getUserInfo.name, job: getUserInfo.about, avatar: getUserInfo.avatar });
-        //console.log(getUserInfo)
-      initialCards.forEach(card => card.myId = getUserInfo._id);
+        initialCards.forEach((card) => (card.myId = getUserInfo._id));
         section.addCardArray(initialCards);
- })
-  .catch((error) => console.error(`ошибка при создании данных страницы ${error}`))
+    })
+    .catch((error) => console.error(`ошибка при создании данных страницы ${error}`));

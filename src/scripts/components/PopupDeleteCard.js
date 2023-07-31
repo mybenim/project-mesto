@@ -1,8 +1,11 @@
-import PopupWithSubmitBtn from "./PopupWithSubmitBtn.js"
+import PopupWithSubmitBtn from "./PopupWithSubmitBtn.js";
 export default class PopupDeleteCard extends PopupWithSubmitBtn {
     constructor(popupSelector, submitFunction) {
         super(popupSelector);
         this._submitFunction = submitFunction;
+        this._form = this._popup.querySelector(".popup__form");
+        this._submitBtn = this._form.querySelector(".popup__safe");
+        this._submitBtn.textContent = this._submitBtn.textContent;
     }
 
     setEventListeners() {
