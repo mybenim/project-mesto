@@ -2,7 +2,7 @@ export default class Popup {
     constructor(popupSelector) {
         this._popup = document.querySelector(popupSelector);
         this._buttonPopupClose = this._popup.querySelector(".popup__close");
-        this._form = this._popup.querySelector(".popup__form");
+        //this._form = this._popup.querySelector(".popup__form");
     }
 
     // Обработчик Esc
