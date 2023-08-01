@@ -46,9 +46,7 @@ const section = new Section({
 const popupImage = new PopupWithImage(popupImageSelector);
 
 const popupDeleteCard = new PopupDeleteCard(popupDeleteCardSelector, ({ element, cardId }) => {
-
-    popupDeleteCard.toggleSubmitBtnText("Удаление...")
-
+  popupDeleteCard.toggleSubmitBtnText("Удаление...")
     api.deleteCard(cardId)
       .then(() => {
         popupDeleteCard.toggleSubmitBtnText("Да")
@@ -64,42 +62,47 @@ const popupDeleteCard = new PopupDeleteCard(popupDeleteCardSelector, ({ element,
 
 const popupProfile = new PopupWithForm(profilePopupSelector, ({ fullname, job }) => {
   popupProfile.toggleSubmitBtnText("Сохранение...")
-  api.setUserInfo({ fullname, job })
-    .then(res => {
-        popupProfile.toggleSubmitBtnText("Сохранить")
-        userInfo.setUserInfo({fullname: res.name, job: res.about, avatar: res.avatar})
-        popupProfile.close()
-    })
-    .catch((error) => console.error(`ошибка при редактировании профиля ${error}`))
-    .finally(() => popupProfile.toggleSubmitBtnText("Сохранить"))
-});
+    api.setUserInfo({ fullname, job })
+      .then((res) => {
+          popupProfile.toggleSubmitBtnText("Сохранить")
+          userInfo.setUserInfo({fullname: res.name, job: res.about, avatar: res.avatar})
+          popupProfile.close()
+      })
+      .catch((error) => {
+          popupProfile.toggleSubmitBtnText("Сохранить")
+          console.error(`ошибка при редактировании профиля ${error}`)
+      })
+      .finally(() => popupProfile.toggleSubmitBtnText("Сохранить"))
+  });
 
 // Форма добавления карточки
 const popupAddCard = new PopupWithForm(addCardPopupSelector, (data) => {
     popupAddCard.toggleSubmitBtnText("Создание...");
-    api.addNewCard(data)
+      api.addNewCard(data)
         .then((card) => {
             popupAddCard.toggleSubmitBtnText("Создать");
             card.myId = myId;
             section.addItemPrepend(newCard(card));
+            popupAddCard.close();
         })
-        .catch((error) => {
+        .catch((error) => console.error(`ошибка при создании новой карточки ${error}`))
+        .finally(() => popupAddCard.toggleSubmitBtnText("Создать"));
+
+      /*.catch((error) => {
             popupAddCard.toggleSubmitBtnText("Создать");
             console.error(`ошибка при создании новой карточки ${error}`);
-        })
-        .finally(() => popupAddCard.toggleSubmitBtnText("Создать"));
-    popupAddCard.close();
+        }) */
 });
-
 
 // Форма Avatar
 const popupAvatar = new PopupWithForm(popupAvatarSelector, (data) => {
   popupAvatar.toggleSubmitBtnText("Сохранение...")
     api.setUserAvatar(data)
         .then((res) => {
-          popupAvatar.toggleSubmitBtnText("Сохранить")
+            popupAvatar.toggleSubmitBtnText("Сохранить")
             console.log(res);
             userInfo.setUserInfo({ fullname: res.name, job: res.about, avatar: res.avatar });
+            popupAvatar.close()
         })
         .catch((error) => console.error(`ошибка при обновлении avatar ${error}`))
         .finally(() => popupAvatar.toggleSubmitBtnText("Сохранить"))

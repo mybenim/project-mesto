@@ -100,15 +100,15 @@
               class="popup__input-error"
               ></span>
             <input
+            type="text"
             id="about-profile"
-          class="popup__input popup__input_ctrl_job"
-          type="text"
-          name="job"
-          placeholder="О себе"
-          required minlength="2" maxlength="200">
+            class="popup__input popup__input_ctrl_job"
+            name="job"
+            placeholder="О себе"
+            required minlength="2" maxlength="200">
             <span
-            class="popup__input-error"
             id="about-profile-error"
+            class="popup__input-error"
             ></span>
     <button type="submit" class="popup__safe popup__safe_disabled" disabled="true">
       <span>Сохранить</span>
@@ -132,14 +132,15 @@
         data-name="form_card" novalidate>
           <input
           type="text"
-          value=""
           id="name-card"
           class="popup__input popup__input_ctrl_name"
+          value=""
           name="name"
           placeholder="Название" required minlength="2" maxlength="30">
               <span
+              id="name-card-error"
               class="popup__input-error"
-              id="name-card-error"></span>
+              ></span>
           <input
           type="url"
           id="link-card"
@@ -225,19 +226,12 @@
       </form>
     </div>
 </section>
-                 <!-- popup__safe_disabled" disabled="true" -->
 
             <!-- Секция script
-
         <script type="module" src="./index.js"></script>-->
-
-
-
     </body>
 </html>
 
              <!-- input.id + "-error"-->
+             <!-- popup__safe_disabled" disabled="true" -->
 
-
-             <!-- Токен: e164ebe0-cf4e-493a-bf1c-60f1f87f2b77
-             Идентификатор группы: cohort-71" -->

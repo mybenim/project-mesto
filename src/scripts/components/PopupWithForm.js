@@ -1,4 +1,3 @@
-//import Popup from "./Popup.js";
 import PopupWithSubmitBtn from "./PopupWithSubmitBtn.js";
 export default class PopupWithForm extends PopupWithSubmitBtn {
     constructor(popupSelector, submitFunction) {
@@ -30,7 +29,6 @@ export default class PopupWithForm extends PopupWithSubmitBtn {
         event.preventDefault();
         this._submitBtn.textContent = `${this._submitBtn.textContent}...`
         this._submitFunction(this.getInputsValue())
-        this.close()
       });
     }
 
